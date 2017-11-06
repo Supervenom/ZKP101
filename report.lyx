@@ -1,0 +1,563 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass scrartcl
+\begin_preamble
+\usepackage{microtype}
+\end_preamble
+\use_default_options false
+\begin_modules
+theorems-ams
+\end_modules
+\maintain_unincluded_children false
+\language italian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.75in
+\topmargin 0.6in
+\rightmargin 0.75in
+\bottommargin 0.6in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Le dimostrazioni a conoscenza zero: l'idea e alcune applicazioni in crittografia
+\end_layout
+
+\begin_layout Author
+Gabriele Vanoni
+\end_layout
+
+\begin_layout Section
+Dalle dimostrazioni interattive alle dimostrazioni a conoscenza zero
+\end_layout
+
+\begin_layout Standard
+Per introdurre la nozione di 
+\shape italic
+dimostrazione a conoscenza zero
+\shape default
+ (d'ora in poi 
+\family sans
+ZNP
+\family default
+), Goldwasser, Micali e Rackoff
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+cit
+\end_layout
+
+\end_inset
+
+ hanno prima dovuto introdurre quella di 
+\shape italic
+dimostrazione interattiva.
+ 
+\shape default
+Presentiamo il concetto prima con un esempio (mutuato da 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+cit
+\end_layout
+
+\end_inset
+
+) passando successivamente alle definizioni formali.
+\end_layout
+
+\begin_layout Example
+Supponiamo che un agente 
+\series bold
+P
+\series default
+ con capacità computazionali illimitate chiamato 
+\shape italic
+prover
+\shape default
+ voglia convincere un altro agente 
+\series bold
+V
+\series default
+ con capacità computazionali limitate chiamato 
+\shape italic
+verifier
+\shape default
+ che due grafi 
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ e 
+\begin_inset Formula $G_{2}$
+\end_inset
+
+ non sono isomorfi.
+ 
+\series bold
+V
+\series default
+ non può fidarsi della parola di 
+\series bold
+P
+\series default
+, per cui chiede a 
+\series bold
+P
+\series default
+ di giocare al seguente gioco.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+V
+\series default
+ sceglie con probabilità uniforme un grafo tra 
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ e 
+\begin_inset Formula $G_{2}$
+\end_inset
+
+ senza comunicarlo a 
+\series bold
+P
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+V
+\series default
+ operando una permutazione casuale dei nomi dei vertici genera un grafo
+ 
+\begin_inset Formula $H$
+\end_inset
+
+ isomorfo a quello selezionato.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+V
+\series default
+ spedisce 
+\begin_inset Formula $H$
+\end_inset
+
+ a 
+\series bold
+P
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+V
+\series default
+ comunica a 
+\series bold
+P
+\series default
+ se 
+\begin_inset Formula $H$
+\end_inset
+
+ è stato generato da 
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ o 
+\begin_inset Formula $G_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+Risulta chiaro che se 
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ e 
+\begin_inset Formula $G_{2}$
+\end_inset
+
+ sono isomorfi allora 
+\begin_inset Formula $H$
+\end_inset
+
+ sarà isomorfo ad entrambi, indipendentemente dalla scelta casuale operata
+ da 
+\series bold
+V
+\series default
+.
+ In questo caso 
+\series bold
+P
+\series default
+ sta mentendo e sarà costretto a comunicare a 
+\series bold
+V
+\series default
+ un grafo tra 
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ e 
+\begin_inset Formula $G_{2}$
+\end_inset
+
+ estratto con probabilità uniforme.
+ La probabilità di azzeccare è dunque 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ e se il gioco viene ripetuto 
+\begin_inset Formula $n$
+\end_inset
+
+ volte 
+\series bold
+P
+\series default
+ avrà probabilità 
+\begin_inset Formula $\left(\frac{1}{2}\right)^{n}$
+\end_inset
+
+ di azzeccare tutte le risposte.
+ Se invece 
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ e 
+\begin_inset Formula $G_{2}$
+\end_inset
+
+ non sono isomorfi, 
+\series bold
+P
+\series default
+ (se è onesto) ha modo di trovare la soluzione corretta con probabilità
+ 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ In questo modo 
+\series bold
+V
+\series default
+ ha la certezza, a meno di una probabilità che tende a zero per 
+\begin_inset Formula $n$
+\end_inset
+
+ che tende all'infinito, che 
+\series bold
+P
+\series default
+ non stia mentendo.
+\end_layout
+
+\begin_layout Example
+È interessante notare che il problema 
+\noun on
+NonIso
+\noun default
+ per cui abbiamo presentato una dimostrazione interattiva appartiene alla
+ classe di complessità 
+\family sans
+co-NP
+\family default
+, e in particolare non è noto se appartenga anche a 
+\family sans
+P
+\family default
+ o a 
+\family sans
+NP
+\family default
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+cit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Un sistema di prove interattivo per un insieme 
+\begin_inset Formula $S$
+\end_inset
+
+ è un gioco con due giocatori, 
+\series bold
+V
+\series default
+ che esegue una strategia polinomiale probabilistica e 
+\series bold
+P
+\series default
+ che esegue una strategia computazionalmente illimitata tale che le seguenti
+ proprietà siano verificate:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Completezza
+\series default
+: dopo aver interagito con 
+\series bold
+P
+\series default
+ sull'input comune 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\series bold
+V
+\series default
+ accetta sempre se 
+\begin_inset Formula $x\in S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Correttezza
+\series default
+: dopo aver interagito con 
+\series bold
+P
+\series default
+ sull'input comune 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\series bold
+V
+\series default
+ rifiuta con probabilità almeno 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ se 
+\begin_inset Formula $x\notin S$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+Chiamiamo 
+\family sans
+IP
+\family default
+ la classe contenente tutti gli insiemi 
+\begin_inset Formula $S$
+\end_inset
+
+ per cui è possibile costruire un sistema di dimostrazioni interattivo.
+ Chiaramente 
+\begin_inset Formula $\mathsf{NP}\subseteq\mathsf{IP}$
+\end_inset
+
+, dal momento che per ogni 
+\begin_inset Formula $S\in\mathsf{NP}$
+\end_inset
+
+, 
+\series bold
+P
+\series default
+ può fornire a 
+\series bold
+V
+\series default
+ il certificato che prova l'appartenenza di 
+\begin_inset Formula $x$
+\end_inset
+
+ a 
+\begin_inset Formula $S$
+\end_inset
+
+, che deve esistere per definizione di 
+\family sans
+NP
+\family default
+.
+ È possibile però dare una caratterizzazione più precisa della classe 
+\family sans
+IP
+\family default
+ attraverso il seguente
+\end_layout
+
+\begin_layout Theorem
+
+\family sans
+\shape up
+IP=PSPACE
+\family default
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+Tutti i problemi rilevanti in crittografia possono dunque essere formulati
+ attraverso dimostrazioni interattive.
+ Per applicazioni crittografiche tuttavia vorremmo che la dimostrazione
+ interattiva non fornisse altro che la validità della stessa.
+ Infatti 
+\series bold
+P
+\series default
+ vorrebbe poter convincere 
+\series bold
+V
+\series default
+ di essere in possesso di un segreto ma senza rivelarglielo, perché non
+ può in generale fidarsi.
+ Se consideriamo ad esempio un'istanza 
+\begin_inset Formula $x$
+\end_inset
+
+ di 
+\noun on
+Sat
+\noun default
+ vorremmo che 
+\series bold
+P
+\series default
+ potesse convincere 
+\series bold
+V
+\series default
+ che 
+\begin_inset Formula $x$
+\end_inset
+
+ è soddisfacibile senza far conoscere l'assegnamento che rende 
+\begin_inset Formula $x$
+\end_inset
+
+ vera.
+ Chiamiamo questa proprietà 
+\shape italic
+zero-knowledge
+\shape default
+.
+ Ci chiediamo quale sia l'insieme dei problemi per cui è possibile fornire
+ dimostrazioni a conoscenza zero.
+ Attraverso un esempio mostriamo che nell'ipotesi di esistenza di funzioni
+ 
+\shape italic
+one-way
+\shape default
+ è possibile costruire dimostrazioni a conoscenza zero per ogni problema
+ in 
+\family sans
+NP
+\family default
+.
+\end_layout
+
+\end_body
+\end_document
