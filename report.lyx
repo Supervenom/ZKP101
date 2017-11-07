@@ -82,7 +82,7 @@ theorems-ams
 \begin_body
 
 \begin_layout Title
-Le dimostrazioni a conoscenza zero: l'idea e alcune applicazioni in crittografia
+Zero-knowledge 101
 \end_layout
 
 \begin_layout Author
@@ -100,7 +100,7 @@ dimostrazione a conoscenza zero
 \shape default
  (d'ora in poi 
 \family sans
-ZNP
+ZKP
 \family default
 ), Goldwasser, Micali e Rackoff
 \begin_inset Note Note
@@ -512,8 +512,8 @@ P
 \series bold
 V
 \series default
- di essere in possesso di un segreto ma senza rivelarglielo, perché non
- può in generale fidarsi.
+ di essere in possesso di un segreto ma senza rivelarglielo, non potendo
+ in generale fidarsi.
  Se consideriamo ad esempio un'istanza 
 \begin_inset Formula $x$
 \end_inset
@@ -544,8 +544,8 @@ V
 zero-knowledge
 \shape default
 .
- Ci chiediamo quale sia l'insieme dei problemi per cui è possibile fornire
- dimostrazioni a conoscenza zero.
+ Ci chiediamo allora quale sia l'insieme dei problemi per cui è possibile
+ fornire dimostrazioni a conoscenza zero.
  Attraverso un esempio mostriamo che nell'ipotesi di esistenza di funzioni
  
 \shape italic
@@ -559,5 +559,145 @@ NP
 .
 \end_layout
 
+\begin_layout Example
+Consideriamo il problema 3-
+\noun on
+Coloring
+\noun default
+, ovvero se sia possibile assegnare a un grafo 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ una colorazione dei vertici 
+\begin_inset Formula $\psi:V\rightarrow\{1,2,3\}$
+\end_inset
+
+ tale che se 
+\begin_inset Formula $\{v_{1},v_{2}\}\in E$
+\end_inset
+
+ allora 
+\begin_inset Formula $\psi(v_{1})\neq\psi(v_{2})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+Vogliamo che 
+\series bold
+P
+\series default
+, in possesso di 
+\begin_inset Formula $\psi$
+\end_inset
+
+, dimostri a 
+\series bold
+V
+\series default
+ che un grafo 
+\begin_inset Formula $G$
+\end_inset
+
+ è colorabile con tre colori senza rivelare 
+\begin_inset Formula $\psi$
+\end_inset
+
+, dal momento che la dimostrazione deve essere a conoscenza zero.
+ Consideriamo allora il seguente protocollo:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+P
+\series default
+ seleziona uno schema di commitment 
+\begin_inset Formula $C(x,r)$
+\end_inset
+
+ e una permutazione casuale 
+\begin_inset Formula $\pi$
+\end_inset
+
+ di 
+\begin_inset Formula $\{1,2,3\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+P
+\series default
+ manda a 
+\series bold
+V
+\series default
+ i commitment 
+\begin_inset Formula $c_{i}=C(\pi(\psi(v_{i})),r_{i})$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $v_{i}\in V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+V
+\series default
+ seleziona un lato 
+\begin_inset Formula $\{v_{i},v_{j}\}\in E$
+\end_inset
+
+ e lo manda a 
+\series bold
+P
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+P
+\series default
+ rivela a 
+\series bold
+V
+\series default
+ 
+\begin_inset Formula $\pi(\psi(v_{i}))$
+\end_inset
+
+ e 
+\begin_inset Formula $\pi(\psi(v_{j}))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+V
+\series default
+ verifica che 
+\begin_inset Formula $\pi(\psi(v_{i}))\neq\pi(\psi(v_{j}))$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
