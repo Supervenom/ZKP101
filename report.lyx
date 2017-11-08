@@ -7,6 +7,7 @@
 \textclass scrartcl
 \begin_preamble
 \usepackage{microtype}
+\usepackage[titletoc,title]{appendix}
 \end_preamble
 \use_default_options false
 \begin_modules
@@ -87,6 +88,24 @@ Zero-knowledge 101
 
 \begin_layout Author
 Gabriele Vanoni
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Introduzione che specifichi il trattamento semi-formale e prerequisiti complessi
+tà computazionale
+\end_layout
+
+\begin_layout Plain Layout
+Indistinguibilità computazionale?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -453,7 +472,10 @@ IP
 \end_inset
 
  per cui è possibile costruire un sistema di dimostrazioni interattivo.
- Chiaramente 
+\end_layout
+
+\begin_layout Standard
+Chiaramente 
 \begin_inset Formula $\mathsf{NP}\subseteq\mathsf{IP}$
 \end_inset
 
@@ -539,12 +561,59 @@ V
 \end_inset
 
  vera.
- Chiamiamo questa proprietà 
-\shape italic
-zero-knowledge
-\shape default
-.
- Ci chiediamo allora quale sia l'insieme dei problemi per cui è possibile
+ Più formalmente,
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Zero-knowledge
+\end_layout
+
+\end_inset
+
+Una dimostrazione interattiva è (computazionalmente) a conoscenza zero se
+ l'insieme 
+\begin_inset Formula $\mathcal{V}$
+\end_inset
+
+ delle trascrizioni delle esecuzioni del protocollo è (computazionalmente)
+ indistinguibile dall'insieme 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+ delle possibili simulazioni di tale protocollo.
+\end_layout
+
+\begin_layout Definition
+Chiamiamo 
+\family sans
+CZK
+\family default
+ la classe contenente tutti gli insiemi 
+\begin_inset Formula $S$
+\end_inset
+
+ per cui è possibile costruire un sistema di dimostrazioni interattivo computazi
+onalmente a conoscenza zero.
+\end_layout
+
+\begin_layout Standard
+In questo modo cioè viene assicurato che tutta l'informazione che 
+\series bold
+V
+\series default
+ potrebbe estrarre interagendo con 
+\series bold
+P
+\series default
+ tramite il protocollo, potrebbe essere estratta anche in assenza di interazione.
+\end_layout
+
+\begin_layout Standard
+Ci chiediamo allora quale sia l'insieme dei problemi per cui è possibile
  fornire dimostrazioni a conoscenza zero.
  Attraverso un esempio mostriamo che nell'ipotesi di esistenza di funzioni
  
@@ -573,11 +642,11 @@ Coloring
 \end_inset
 
  tale che se 
-\begin_inset Formula $\{v_{1},v_{2}\}\in E$
+\begin_inset Formula $\{v_{i},v_{j}\}\in E$
 \end_inset
 
  allora 
-\begin_inset Formula $\psi(v_{1})\neq\psi(v_{2})$
+\begin_inset Formula $\psi(v_{i})\neq\psi(v_{j})$
 \end_inset
 
 .
@@ -699,5 +768,183 @@ V
 \end_layout
 
 \end_deeper
+\begin_layout Example
+Perché il protocollo sia valido occorre mostrare che sia completo, corretto
+ e a conoscenza zero.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Completezza.
+ 
+\series default
+Risulta chiaro che se 
+\series bold
+P
+\series default
+ fornisce una colorazione valida ed esegue correttamente il protocollo di
+ commitment allora 
+\series bold
+V
+\series default
+ accetta con probabilità uno.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Correttezza.
+ 
+\series default
+Se 
+\series bold
+P
+\series default
+ sta mentendo (cioè se 
+\begin_inset Formula $G$
+\end_inset
+
+ non è colorabile con tre colori), allora c'è almeno un lato 
+\begin_inset Formula $\{v_{i},v_{j}\}$
+\end_inset
+
+ di 
+\begin_inset Formula $G$
+\end_inset
+
+ tale che 
+\begin_inset Formula $\psi(v_{i})=\psi(v_{j})$
+\end_inset
+
+.
+ 
+\series bold
+V
+\series default
+ allora ha probabilità almeno 
+\begin_inset Formula $\frac{1}{|E|}$
+\end_inset
+
+ di selezionare un lato colorato in maniera scorretta e quindi probabilità
+ al più 
+\begin_inset Formula $1-\frac{1}{|E|}$
+\end_inset
+
+ di accettare.
+ Se il protocollo viene ripetuto 
+\begin_inset Formula $n$
+\end_inset
+
+ volte questa probabilità può essere fatta diventare piccola a piacere,
+ per cui la probabilità di rifiuto diventa 
+\begin_inset Formula $1-\left(1-\frac{1}{|E|}\right)^{n}$
+\end_inset
+
+che tende a uno per 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Conoscenza zero.
+
+\series default
+ Se lo schema di commitment è computazionalmente occultante allora l'ovvia
+ simulazione e il protocollo effettivo saranno computazionalmente indistinguibil
+i.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Considerando che 3-
+\noun on
+Coloring 
+\noun default
+è 
+\family sans
+NP-completo
+\family default
+ è immediato affermare il seguente
+\end_layout
+
+\begin_layout Theorem
+Sotto l'ipotesi di esistenza di funzioni one-way 
+\begin_inset Formula $\mathsf{NP}\subseteq\mathsf{CZK}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La caratterizzazione completa di 
+\family sans
+CZK
+\family default
+ è fornita dal seguente
+\end_layout
+
+\begin_layout Theorem
+Sotto l'ipotesi di esistenza di funzioni one-way 
+\begin_inset Formula $\mathsf{CZK=IP}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+È possibile dunque assumendo ipotesi standard in crittografia fornire dimostrazi
+oni a conoscenza zero per ogni problema appartenente alla classe 
+\family sans
+PSPACE
+\family default
+.
+\end_layout
+
+\begin_layout Section
+Un'applicazione
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{appendices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Schemi di commitment
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{appendices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
