@@ -906,10 +906,6 @@ PSPACE
 .
 \end_layout
 
-\begin_layout Section
-Un'applicazione
-\end_layout
-
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -928,6 +924,306 @@ begin{appendices}
 
 \begin_layout Section
 Schemi di commitment
+\end_layout
+
+\begin_layout Standard
+Intuitivamente gli 
+\emph on
+schemi di commitment
+\emph default
+ vengono introdotti per risolvere il seguente problema.
+ Vogliamo secretare un messaggio, affidarlo a qualcuno che lo conservi senza
+ poterlo leggere e successivamente svelarlo assicurando che questo non sia
+ stato modificato.
+ Possiamo pensare ad un agente 
+\series bold
+A
+\series default
+ che chiude un messaggio in una cassaforte che poi affida a 
+\series bold
+B
+\series default
+, che però non possiede la chiave.
+ Passato del tempo 
+\series bold
+A
+\series default
+ fornisce la chiave a 
+\series bold
+B
+\series default
+ che così potrà leggere il messaggio e sarà certo che il contenuto era quello
+ scritto in primo luogo da 
+\series bold
+A
+\series default
+, dal momento che nessuno ha avuto accesso alla cassaforte nel mentre.
+ Questo tipo di protocollo cioè è adatto per una comunicazione tra due agenti
+ che non si fidano l'uno dell'altro.
+ 
+\series bold
+A
+\series default
+ infatti teme che 
+\series bold
+B
+\series default
+ possa accedere all'informazione prima del dovuto, mentre 
+\series bold
+B
+\series default
+ teme che 
+\series bold
+A
+\series default
+ possa cambiarla dopo essersi già impegnato.
+ 
+\end_layout
+
+\begin_layout Example
+Usando questa idea è possibile giocare a 
+\family typewriter
+carta-sasso-forbice
+\family default
+ per posta.
+ Il protocollo è il seguente:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+A
+\series default
+ chiude la propria mossa nella cassaforte e la spedisce a 
+\series bold
+B
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+B
+\series default
+ spedisce la propria mossa ad 
+\series bold
+A
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+A
+\series default
+ spedisce la chiave della cassaforte a 
+\series bold
+B
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+Entrambi conoscono le mosse degli avversari e possono stabilire il vincitore.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Notiamo che 
+\series bold
+B
+\series default
+ non conosce la mossa di 
+\series bold
+A
+\series default
+ fino a che non gli viene spedita la chiave e che 
+\series bold
+A
+\series default
+ non può cambiare la propria mossa dopo la scelta di 
+\series bold
+B
+\series default
+, perché la sua decisione è già nelle mani di 
+\series bold
+B
+\series default
+, anche se inizialmente egli non può accedervi.
+\end_layout
+
+\begin_layout Standard
+Formalizziamo ora le due proprietà che garantiscono la sicurezza di uno
+ schema di commitment, ovvero la segretezza e il fatto che sia vincolante.
+\end_layout
+
+\begin_layout Definition
+Chiamiano schema di commitment un algoritmo pubblico 
+\begin_inset Formula $C(x,r)$
+\end_inset
+
+ dove 
+\begin_inset Formula $x$
+\end_inset
+
+ è il messaggio e 
+\begin_inset Formula $r$
+\end_inset
+
+ un valore random.
+ Se 
+\series bold
+M
+\series default
+ è il mittente e 
+\series bold
+R
+\series default
+ il ricevente il commitment consiste in 
+\series bold
+M
+\series default
+ che calcola e spedisce 
+\begin_inset Formula $c=C(x,r)$
+\end_inset
+
+ a 
+\series bold
+R
+\series default
+ mentre il decommitment in 
+\series bold
+M
+\series default
+ che svela i valori di 
+\begin_inset Formula $x'$
+\end_inset
+
+ ed 
+\begin_inset Formula $r'$
+\end_inset
+
+ e 
+\series bold
+R
+\series default
+ che controlla che 
+\begin_inset Formula $C(x',r')=c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Binding
+\end_layout
+
+\end_inset
+
+Uno schema di commitment 
+\begin_inset Formula $C(x,r)$
+\end_inset
+
+ è detto (computazionalmente) vincolante se nessun avversario (computazionalment
+e limitato) noti 
+\begin_inset Formula $x$
+\end_inset
+
+ ed 
+\begin_inset Formula $r$
+\end_inset
+
+ può generare 
+\begin_inset Formula $x'\neq x$
+\end_inset
+
+ ed 
+\begin_inset Formula $r'$
+\end_inset
+
+ tali che 
+\begin_inset Formula $C(x',r')=C(x,r)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Concealing o Hiding
+\end_layout
+
+\end_inset
+
+Uno schema di commitment 
+\begin_inset Formula $C(x,r)$
+\end_inset
+
+ è detto (computazionalmente) occultante se nessun avversario (computazionalment
+e limitato) può indovinare 
+\begin_inset Formula $b$
+\end_inset
+
+ dato 
+\begin_inset Formula $c=C(x_{b},r)$
+\end_inset
+
+ con 
+\begin_inset Formula $b$
+\end_inset
+
+ estratto uniformemente da 
+\begin_inset Formula $\{0,1\}$
+\end_inset
+
+ ed essendo a lui noti 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ e 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Un modo semplice per costruire uno schema di commitment computazionalmente
+ sicuro è ricorrere a una funzione di hash crittografico 
+\begin_inset Formula $H$
+\end_inset
+
+, ovvero considerando 
+\begin_inset Formula $C(x,r)=H(x||r)$
+\end_inset
+
+.
+ In particolare lo schema è vincolante in virtù della resistenza alla seconda
+ preimmagine e occultante grazie alla resistenza alla preimmagine.
 \end_layout
 
 \begin_layout Standard
