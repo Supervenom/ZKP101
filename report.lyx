@@ -8,6 +8,13 @@
 \begin_preamble
 \usepackage{microtype}
 \usepackage[titletoc,title]{appendix}
+\usepackage[headsepline,footsepline]{scrlayer-scrpage}
+\clearpairofpagestyles
+\ohead{\pagemark}
+\ihead{\headmark}
+\automark[]{section}
+\renewcommand*\pagemark{{\nobreakspace\thepage}}
+\addtokomafont{pageheadfoot}{\upshape}
 \end_preamble
 \use_default_options false
 \begin_modules
@@ -16,7 +23,7 @@ theorems-ams
 \maintain_unincluded_children false
 \language italian
 \language_package default
-\inputencoding auto
+\inputencoding utf8
 \fontencoding global
 \font_roman "lmodern" "default"
 \font_sans "lmss" "default"
@@ -31,13 +38,13 @@ theorems-ams
 \graphics default
 \default_output_format default
 \output_sync 0
-\bibtex_command default
+\bibtex_command bibtex
 \index_command default
 \paperfontsize 11
 \spacing single
 \use_hyperref false
 \papersize a4paper
-\use_geometry false
+\use_geometry true
 \use_package amsmath 1
 \use_package amssymb 2
 \use_package cancel 1
@@ -61,10 +68,8 @@ theorems-ams
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 0.75in
-\topmargin 0.6in
-\rightmargin 0.75in
-\bottommargin 0.6in
+\topmargin 1.7in
+\bottommargin 1.7in
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -91,16 +96,28 @@ Gabriele Vanoni
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduzione
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Introduzione che specifichi il trattamento semi-formale e prerequisiti complessi
-tà computazionale
-\end_layout
-
-\begin_layout Plain Layout
-Indistinguibilità computazionale?
+dimostrazione scritta sui libri, dimostrazione in classe (interattiva)
 \end_layout
 
 \end_inset
@@ -108,8 +125,59 @@ Indistinguibilità computazionale?
 
 \end_layout
 
+\begin_layout Standard
+In questo breve report tracceremo un quadro sulle dimostrazioni a conoscenza
+ zero.
+ È un argomento ormai classico nell'ambito della crittografia sebbene sia
+ considerato avanzato.
+ Proveremo a trattare gli argomenti in maniera il più possibile chiara ed
+ autocontenuta, rimandando a 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "goldreich_zero-knowledge_2002"
+
+\end_inset
+
+ per una trattazione più formale e completa.
+ Gli unici prerequisiti richiesti sono la conoscenza base della teoria della
+ complessità computazionale e della probabilità.
+ In particolare nella Sezione 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:def"
+
+\end_inset
+
+ caratterizzeremo le dimostrazioni a conoscenza zero da un punto di vista
+ computazionale, mentre nella Sezione 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:app"
+
+\end_inset
+
+ ci si concentrerà su alcune semplici applicazioni.
+ Infine è presente un'appendice contenente le principali definizioni riguardanti
+ gli schemi di commitment.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "smart_cryptography_2016"
+
+\end_inset
+
+ è stata una fonte di ispirazione per la stesura dell'intero lavoro.
+\end_layout
+
 \begin_layout Section
 Dalle dimostrazioni interattive alle dimostrazioni a conoscenza zero
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:def"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -117,17 +185,10 @@ Per introdurre la nozione di
 \shape italic
 dimostrazione a conoscenza zero
 \shape default
- (d'ora in poi 
-\family sans
-ZKP
-\family default
-), Goldwasser, Micali e Rackoff
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-cit
-\end_layout
+, Goldwasser, Micali e Rackoff in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "goldwasser_knowledge_1985"
 
 \end_inset
 
@@ -137,16 +198,13 @@ dimostrazione interattiva.
  
 \shape default
 Presentiamo il concetto prima con un esempio (mutuato da 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-cit
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "sipser_introduction_2012"
 
 \end_inset
 
-) passando successivamente alle definizioni formali.
+), passando successivamente alle definizioni formali.
 \end_layout
 
 \begin_layout Example
@@ -244,11 +302,11 @@ P
 \begin_layout Enumerate
 
 \series bold
-V
+P
 \series default
  comunica a 
 \series bold
-P
+V
 \series default
  se 
 \begin_inset Formula $H$
@@ -378,12 +436,9 @@ NP
 status open
 
 \begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-cit
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wigderson_mathematics_2017"
 
 \end_inset
 
@@ -512,10 +567,25 @@ IP
 \end_layout
 
 \begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "shamir_ip_1992"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 
 \family sans
 \shape up
-IP=PSPACE
+IP=SPACE
 \family default
 \shape default
 .
@@ -874,6 +944,21 @@ NP-completo
 \end_layout
 
 \begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wigderson_proofs_1986"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 Sotto l'ipotesi di esistenza di funzioni one-way 
 \begin_inset Formula $\mathsf{NP}\subseteq\mathsf{CZK}$
 \end_inset
@@ -886,10 +971,25 @@ La caratterizzazione completa di
 \family sans
 CZK
 \family default
- è fornita dal seguente
+ è invece fornita dal seguente
 \end_layout
 
 \begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ben-or_everything_1988"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 Sotto l'ipotesi di esistenza di funzioni one-way 
 \begin_inset Formula $\mathsf{CZK=IP}$
 \end_inset
@@ -904,6 +1004,429 @@ oni a conoscenza zero per ogni problema appartenente alla classe
 PSPACE
 \family default
 .
+\end_layout
+
+\begin_layout Section
+L'uso nelle applicazioni
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:app"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Presentiamo ora alcune applicazioni dei concetti che abbiamo esposto nella
+ sezione precedente.
+ In particolare introdurremo, all'inizio tramite un esempio, i 
+\emph on
+protocolli sigma
+\emph default
+.
+ Questi permettono di generare semplicemente schemi di autenticazione e
+ di firma al costo di un'ipotesi in più, l'onestà del verificatore (assumiamo
+ cioè che 
+\series bold
+V
+\series default
+ esegua correttamente il protocollo).
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Protocollo di identificazione di Schnorr
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:sch"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+L'idea è che per identificarsi un utente debba dimostrare di conoscere un
+ segreto.
+ Tuttavia non potendoci fidare del verificatore, non vogliamo che il segreto
+ venga svelato all'atto dell'autenticazione.
+ In questo caso il segreto posseduto da 
+\series bold
+P
+\series default
+ è il logaritmo discreto 
+\begin_inset Formula $x$
+\end_inset
+
+ di 
+\begin_inset Formula $y$
+\end_inset
+
+ in base 
+\begin_inset Formula $g$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{Z}_{q}$
+\end_inset
+
+, dove 
+\begin_inset Formula $q$
+\end_inset
+
+ è un primo grande.
+ Il protocollo è il seguente.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+P
+\series default
+ manda a 
+\series bold
+V
+\series default
+ 
+\begin_inset Formula $r=g^{k}$
+\end_inset
+
+, con 
+\begin_inset Formula $k$
+\end_inset
+
+ estratto uniformemente da 
+\begin_inset Formula $\mathbb{Z}_{q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+V
+\series default
+ manda a 
+\series bold
+P
+\series default
+ 
+\begin_inset Formula $e$
+\end_inset
+
+ estratto uniformemente da 
+\begin_inset Formula $\mathbb{Z}_{q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+P
+\series default
+ manda a 
+\series bold
+V
+\series default
+ 
+\begin_inset Formula $s=k+x\cdot e\:(\textrm{mod}\:q$
+\end_inset
+
+) .
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+V
+\series default
+ verifica che 
+\begin_inset Formula $r=g^{s}\cdot y^{-e}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+Perché il protocollo sia valido occorre mostrare che sia completo, corretto
+ e a conoscenza zero.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Completezza.
+ 
+\series default
+Se effettivamente 
+\begin_inset Formula $x=\log_{g}y$
+\end_inset
+
+ allora 
+\begin_inset Formula $g^{s}\cdot y^{-e}=g^{k}\cdot(g^{x})^{e}\cdot y^{-e}=r\cdot y^{e}\cdot y^{-e}=r$
+\end_inset
+
+.
+ 
+\series bold
+V
+\series default
+ dunque accetta certamente se 
+\series bold
+P
+\series default
+ esegue correttamente il protocollo.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Correttezza.
+ 
+\series default
+Se 
+\series bold
+P
+\series default
+ non conosce 
+\begin_inset Formula $x$
+\end_inset
+
+ ha probabilità 
+\begin_inset Formula $\frac{1}{q}$
+\end_inset
+
+ di riuscire a convincere 
+\series bold
+V
+\series default
+, cioè la probabilità di estrarre uniformemente 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Conoscenza zero.
+
+\series default
+ V può simulare esecuzioni corrette del protocollo estrendo uniformemente
+ 
+\begin_inset Formula $e$
+\end_inset
+
+ ed 
+\begin_inset Formula $s$
+\end_inset
+
+, e calcolando 
+\begin_inset Formula $r=g^{s}\cdot y^{-e}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Generalizzando possiamo dire che assumendo di avere un'istanza 
+\begin_inset Formula $x$
+\end_inset
+
+ di un linguaggio 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ in 
+\family sans
+NP 
+\family default
+vogliamo che 
+\series bold
+P
+\series default
+ dimostri a 
+\series bold
+V
+\series default
+ di conoscere il certificato 
+\begin_inset Formula $c$
+\end_inset
+
+ che provi che 
+\begin_inset Formula $x\in\mathcal{L}$
+\end_inset
+
+.
+ Si chiede quindi qualcosa in più rispetto alle tradizionali dimostrazioni
+ a conoscenza zero.
+ 
+\series bold
+V
+\series default
+ non vuole solo essere convinto del fatto che 
+\begin_inset Formula $x$
+\end_inset
+
+ appartenga ad 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+, vuole essere sicuro che 
+\series bold
+P
+\series default
+ conosca il testimone dell'appartenenza.
+ Chiamiamo questo fatto 
+\emph on
+dimostrazione di conoscenza
+\emph default
+.
+ Se la dimostrazione è a conoscenza zero, allora abbiamo una 
+\emph on
+dimostrazione di conoscenza a conoscenza zero
+\emph default
+.
+ Formalmente,
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Zero-knowledge proof of knowledge
+\end_layout
+
+\end_inset
+
+Un protocollo è detto 
+\emph on
+zero-knowledge proof of knowledge 
+\emph default
+se è a conoscenza zero ed esite un estrattore 
+\begin_inset Formula $E$
+\end_inset
+
+, cioè un algoritmo che può usare 
+\series bold
+P
+\series default
+ per ottenere il certificato di appartenenza c.
+\end_layout
+
+\begin_layout Standard
+Possiamo mostrare che il protocollo di identificazione di Schnorr (Esempio
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:sch"
+
+\end_inset
+
+) è una dimostrazione di conoscenza a conoscenza zero dal momento che verifica
+ una proprietà chiamata 
+\emph on
+correttezza speciale
+\emph default
+, ovvero 
+\end_layout
+
+\begin_layout Proposition
+Date due trascrizioni del protocollo 
+\begin_inset Formula $(r,e,s)$
+\end_inset
+
+ e 
+\begin_inset Formula $(r,e',s')$
+\end_inset
+
+ possiamo estrarre il testimone 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $r=g^{s}\cdot y^{-e}=g^{s'}\cdot y^{-e'}=r=g^{s}\cdot g^{x\cdot(-e)}=g^{s'}\cdot g^{x\cdot(-e')}$
+\end_inset
+
+.
+ Da questa 
+\begin_inset Formula $s+x\cdot(-e)=s'+x\cdot(-e')\:(\textrm{mod}\:q)$
+\end_inset
+
+.
+ Dunque 
+\begin_inset Formula $x=\frac{s'-s}{e'-e}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+La dimostrazione fornisce l'estrattore 
+\begin_inset Formula $E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+definizioni (sigma protocollo)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "ZKP"
+options "alpha"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1056,8 +1579,9 @@ B
 \end_layout
 
 \begin_layout Standard
-Formalizziamo ora le due proprietà che garantiscono la sicurezza di uno
- schema di commitment, ovvero la segretezza e il fatto che sia vincolante.
+Formalizziamo ora la nozione di schema di commitment e le due proprietà
+ che ne garantiscono la sicurezza, ovvero l'occultamento e il fatto che
+ sia vincolante.
 \end_layout
 
 \begin_layout Definition
