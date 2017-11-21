@@ -113,16 +113,6 @@ LatexCommand tableofcontents
 
 \begin_layout Section
 Introduzione
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-dimostrazione scritta sui libri, dimostrazione in classe (interattiva)
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -522,7 +512,11 @@ Chiamiamo
 \family sans
 IP
 \family default
- la classe contenente tutti gli insiemi 
+ (
+\emph on
+interactive polynomial time
+\emph default
+) la classe contenente tutti gli insiemi 
 \begin_inset Formula $S$
 \end_inset
 
@@ -589,6 +583,18 @@ IP=SPACE
 \family default
 \shape default
 .
+\end_layout
+
+\begin_layout Standard
+Intuitivamente questo significa che l'interazione permette di risolvere
+ efficientemente più problemi di quanti è possibile risolvere in assenza
+ di essa.
+ Si pensi a un docente che deve spiegare una dimostrazione.
+ Certamente è più efficiente se lo fa in classe quando gli studenti possono
+ intervenire per fare domande rispetto a lasciarla da fare a casa su delle
+ dispense.
+ In questo caso infatti è come se dovesse anticipare tutte le possibili
+ domande, mentre in classe risponde solo a quelle che gli vengono poste.
 \end_layout
 
 \begin_layout Standard
@@ -1032,6 +1038,23 @@ protocolli sigma
 V
 \series default
  esegua correttamente il protocollo).
+ I protocolli sigma sono composti da quattro fasi: 
+\emph on
+commitment
+\emph default
+, 
+\emph on
+challenge
+\emph default
+, 
+\emph on
+response
+\emph default
+, 
+\emph on
+verification
+\emph default
+.
 \end_layout
 
 \begin_layout Example
@@ -1090,8 +1113,11 @@ P
 \begin_deeper
 \begin_layout Enumerate
 
+\family sans
+commitment:
+\family default
 \series bold
-P
+ P
 \series default
  manda a 
 \series bold
@@ -1114,8 +1140,11 @@ V
 
 \begin_layout Enumerate
 
+\family sans
+challenge:
+\family default
 \series bold
-V
+ V
 \series default
  manda a 
 \series bold
@@ -1134,8 +1163,11 @@ P
 
 \begin_layout Enumerate
 
+\family sans
+response:
+\family default
 \series bold
-P
+ P
 \series default
  manda a 
 \series bold
@@ -1150,8 +1182,11 @@ V
 
 \begin_layout Enumerate
 
+\family sans
+verification:
+\family default
 \series bold
-V
+ V
 \series default
  verifica che 
 \begin_inset Formula $r=g^{s}\cdot y^{-e}$
@@ -1276,7 +1311,7 @@ V
 
 .
  Si chiede quindi qualcosa in più rispetto alle tradizionali dimostrazioni
- a conoscenza zero.
+ di appartenenza/esistenza.
  
 \series bold
 V
@@ -1389,19 +1424,6 @@ La dimostrazione fornisce l'estrattore
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Itemize
-definizioni (sigma protocollo)
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
