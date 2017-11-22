@@ -16,6 +16,7 @@
 \renewcommand*\pagemark{{\nobreakspace\thepage}}
 \addtokomafont{pageheadfoot}{\upshape}
 \end_preamble
+\options abstracton
 \use_default_options false
 \begin_modules
 theorems-ams
@@ -93,6 +94,18 @@ Zero-knowledge 101
 
 \begin_layout Author
 Gabriele Vanoni
+\end_layout
+
+\begin_layout Abstract
+Le dimostrazioni interattive permettono la costruzione di protocolli per
+ convincere efficientemente un altro agente della validità di un certo enunciato.
+ Se la dimostrazione non comunica altro che la validità dell'asserzione
+ allora diciamo che è a conoscenza zero.
+ Questo strumento risulta applicabile a una vasta classe di problemi e di
+ grande utilità in crittografia.
+ Infatti nei protocolli di sicurezza spesso le parti coinvolte non possono
+ fidarsi l'una dell'altra e non vogliono quindi rivelare i segreti di cui
+ sono in possesso, ma solo convincere la controparte di esserne a conoscenza.
 \end_layout
 
 \begin_layout Standard
