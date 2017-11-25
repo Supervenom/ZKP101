@@ -592,7 +592,7 @@ key "shamir_ip_1992"
 
 \family sans
 \shape up
-IP=SPACE
+IP=PSPACE
 \family default
 \shape default
 .
@@ -614,7 +614,7 @@ Intuitivamente questo significa che l'interazione permette di risolvere
 Tutti i problemi rilevanti in crittografia possono dunque essere formulati
  attraverso dimostrazioni interattive.
  Per applicazioni crittografiche tuttavia vorremmo che la dimostrazione
- interattiva non fornisse altro che la validità della stessa.
+ interattiva non fornisse altro che la validità dell'enunciato stesso.
  Infatti 
 \series bold
 P
@@ -1377,7 +1377,11 @@ se è a conoscenza zero ed esite un estrattore
 \series bold
 P
 \series default
- per ottenere il certificato di appartenenza c.
+ per ottenere il certificato di appartenenza 
+\begin_inset Formula $c$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard

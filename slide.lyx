@@ -165,15 +165,15 @@ PoliMi
 \end_layout
 
 \begin_layout Date
-12 Dicembre 2017
+5 Dicembre 2017
 \end_layout
 
-\begin_layout Frame
+\begin_layout PlainFrame
 \begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-ff
+13 Dicembre 2013, Politecnico di Milano
 \end_layout
 
 \end_inset
@@ -183,7 +183,960 @@ ff
 
 \begin_deeper
 \begin_layout Standard
-fff
+\begin_inset Graphics
+	filename micali.jpg
+	lyxscale 10
+	scale 24
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout PlainFrame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+L'importanza dell'interazione
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Un docente deve convincere i propri studenti della validità di un teorema.
+ Ha almeno due possiblità:
+\end_layout
+
+\begin_layout Itemize
+Presentare una dimostrazione in 
+\series bold
+classe
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+Scrivere una dimostrazione nelle proprie dispense e lasciarla da fare a
+ 
+\series bold
+casa
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Qual è la differenza? Le due dimostrazioni devono essere uguali?
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Intuitivamente in classe il docente può esporre una 
+\series bold
+prova
+\series default
+ che sfrutti l'
+\series bold
+interazione
+\series default
+ con gli studenti, che potranno fare domande nei passaggi critici, così
+ da rendergli più 
+\series bold
+semplice
+\series default
+ il compito.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La dimostrazione stampata invece è come se dovesse già contenere in anticipo
+ le risposte a tutti i possibili dubbi degli studenti.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Una dimostrazione interattiva per 
+\family roman
+\noun on
+NonIso
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Supponiamo che 
+\series bold
+P
+\series default
+(rover) voglia convincere 
+\series bold
+V
+\series default
+(erifier) che due grafi 
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ e 
+\begin_inset Formula $G_{2}$
+\end_inset
+
+ non sono isomorfi.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+V
+\series default
+ non può fidarsi della parola di 
+\series bold
+P
+\series default
+, per cui chiede a 
+\series bold
+P
+\series default
+ di giocare al seguente gioco.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+V
+\series default
+ sceglie con probabilità uniforme un grafo tra 
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ e 
+\begin_inset Formula $G_{2}$
+\end_inset
+
+ senza comunicarlo a 
+\series bold
+P
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+V
+\series default
+ operando una permutazione casuale dei nomi dei vertici genera un grafo
+ 
+\begin_inset Formula $H$
+\end_inset
+
+ isomorfo a quello selezionato.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+V
+\series default
+ spedisce 
+\begin_inset Formula $H$
+\end_inset
+
+ a 
+\series bold
+P
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+P
+\series default
+ comunica a 
+\series bold
+V
+\series default
+ se 
+\begin_inset Formula $H$
+\end_inset
+
+ è stato generato da 
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ o 
+\begin_inset Formula $G_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Se 
+\series bold
+P
+\series default
+ mente o non conosce la risposta ha probabilità 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ di vincere.
+ Se il gioco viene ripetuto 
+\begin_inset Formula $n$
+\end_inset
+
+ volte, 
+\begin_inset Formula $\left(\frac{1}{2}\right)^{n}$
+\end_inset
+
+.
+ Altrimenti se conosce la risposta ed è onesto 
+\series bold
+P 
+\series default
+vince con probabilità 
+\begin_inset Formula $1$
+\end_inset
+
+ .
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sistemi di prove interattivi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wigderson_mathematics_2017"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Un sistema di prove interattivo per un insieme 
+\begin_inset Formula $S$
+\end_inset
+
+ è un gioco con due giocatori, 
+\series bold
+V
+\series default
+ che esegue una strategia polinomiale probabilistica e 
+\series bold
+P
+\series default
+ che esegue una strategia computazionalmente illimitata tale che le seguenti
+ proprietà siano verificate:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Completezza
+\series default
+: dopo aver interagito con 
+\series bold
+P
+\series default
+ sull'input comune 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\series bold
+V
+\series default
+ accetta sempre se 
+\begin_inset Formula $x\in S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Correttezza
+\series default
+: dopo aver interagito con 
+\series bold
+P
+\series default
+ sull'input comune 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\series bold
+V
+\series default
+ rifiuta con probabilità almeno 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ se 
+\begin_inset Formula $x\notin S$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+Chiamiamo 
+\family sans
+IP
+\family default
+ (
+\emph on
+interactive polynomial time
+\emph default
+) la classe contenente tutti gli insiemi 
+\begin_inset Formula $S$
+\end_inset
+
+ per cui è possibile costruire un sistema di dimostrazioni interattivo.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+La classe di complessità IP
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Chiaramente 
+\begin_inset Formula $\mathsf{NP}\subseteq\mathsf{IP}$
+\end_inset
+
+, dal momento che per ogni 
+\begin_inset Formula $S\in\mathsf{NP}$
+\end_inset
+
+, 
+\series bold
+P
+\series default
+ può fornire a 
+\series bold
+V
+\series default
+ il certificato che prova l'appartenenza di 
+\begin_inset Formula $x$
+\end_inset
+
+ a 
+\begin_inset Formula $S$
+\end_inset
+
+, che deve esistere per definizione di 
+\family sans
+NP
+\family default
+.
+ È possibile però dare una caratterizzazione più precisa della classe 
+\family sans
+IP
+\family default
+ attraverso il seguente
+\end_layout
+
+\begin_layout Theorem
+
+\family sans
+\shape up
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "shamir_ip_1992"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+IP=PSPACE
+\family default
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+L'interazione dunque aggiunge effettivamente potere computazionale.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Conoscenza zero
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Nei protocolli crittografici interattivi non vorremmo rivelare i nostri
+ segreti, perché non possiamo fidarci della controparte.
+ Vorremmo cioè una dimostrazione che non comunicasse altro che la validità
+ dell'enunciato stesso.
+ 
+\end_layout
+
+\begin_layout Definition
+Una dimostrazione interattiva è (computazionalmente) a conoscenza zero se
+ l'insieme 
+\begin_inset Formula $\mathcal{V}$
+\end_inset
+
+ delle trascrizioni delle esecuzioni del protocollo è (computazionalmente)
+ indistinguibile dall'insieme 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+ delle possibili simulazioni di tale protocollo.
+\end_layout
+
+\begin_layout Definition
+Chiamiamo 
+\family sans
+CZK
+\family default
+ la classe contenente tutti gli insiemi 
+\begin_inset Formula $S$
+\end_inset
+
+ per cui è possibile costruire un sistema di dimostrazioni interattivo computazi
+onalmente a conoscenza zero.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Un protocollo interattivo per 
+\family roman
+\noun on
+3-Coloring
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Consideriamo il problema 
+\family roman
+3-
+\noun on
+Coloring
+\family default
+\noun default
+, ovvero se sia possibile assegnare a un grafo 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ una colorazione dei vertici 
+\begin_inset Formula $\psi:V\rightarrow\{1,2,3\}$
+\end_inset
+
+ tale che se 
+\begin_inset Formula $\{v_{i},v_{j}\}\in E$
+\end_inset
+
+ allora 
+\begin_inset Formula $\psi(v_{i})\neq\psi(v_{j})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Vogliamo che 
+\series bold
+P
+\series default
+, in possesso di 
+\begin_inset Formula $\psi$
+\end_inset
+
+, dimostri a 
+\series bold
+V
+\series default
+ che un grafo 
+\begin_inset Formula $G$
+\end_inset
+
+ è colorabile con tre colori a conoscenza zero cioè senza rivelare 
+\begin_inset Formula $\psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+P
+\series default
+ seleziona uno schema di commitment 
+\begin_inset Formula $C(x,r)$
+\end_inset
+
+ e una permutazione casuale 
+\begin_inset Formula $\pi$
+\end_inset
+
+ di 
+\begin_inset Formula $\{1,2,3\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+P
+\series default
+ manda a 
+\series bold
+V
+\series default
+ i commitment 
+\begin_inset Formula $c_{i}=C(\pi(\psi(v_{i})),r_{i})$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $v_{i}\in V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+V
+\series default
+ seleziona un lato 
+\begin_inset Formula $\{v_{i},v_{j}\}\in E$
+\end_inset
+
+ e lo manda a 
+\series bold
+P
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+P
+\series default
+ rivela a 
+\series bold
+V
+\series default
+ 
+\begin_inset Formula $\pi(\psi(v_{i}))$
+\end_inset
+
+ e 
+\begin_inset Formula $\pi(\psi(v_{j}))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+V
+\series default
+ verifica che 
+\begin_inset Formula $\pi(\psi(v_{i}))\neq\pi(\psi(v_{j}))$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\noun on
+3-Coloring 
+\begin_inset Formula $\in$
+\end_inset
+
+ 
+\family default
+CZK
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Completezza.
+ 
+\series default
+Risulta chiaro che se 
+\series bold
+P
+\series default
+ fornisce una colorazione valida ed esegue correttamente il protocollo di
+ commitment allora 
+\series bold
+V
+\series default
+ accetta con probabilità uno.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Correttezza.
+ 
+\series default
+Se 
+\series bold
+P
+\series default
+ sta mentendo (cioè se 
+\begin_inset Formula $G$
+\end_inset
+
+ non è colorabile con tre colori), allora c'è almeno un lato 
+\begin_inset Formula $\{v_{i},v_{j}\}$
+\end_inset
+
+ di 
+\begin_inset Formula $G$
+\end_inset
+
+ tale che 
+\begin_inset Formula $\psi(v_{i})=\psi(v_{j})$
+\end_inset
+
+.
+ 
+\series bold
+V
+\series default
+ allora ha probabilità almeno 
+\begin_inset Formula $\frac{1}{|E|}$
+\end_inset
+
+ di selezionare un lato colorato in maniera scorretta e quindi probabilità
+ al più 
+\begin_inset Formula $1-\frac{1}{|E|}$
+\end_inset
+
+ di accettare.
+ Se il protocollo viene ripetuto 
+\begin_inset Formula $n$
+\end_inset
+
+ volte questa probabilità può essere fatta diventare piccola a piacere,
+ per cui la probabilità di rifiuto diventa 
+\begin_inset Formula $1-\left(1-\frac{1}{|E|}\right)^{n}$
+\end_inset
+
+che tende a uno per 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Conoscenza zero.
+
+\series default
+ Se lo schema di commitment è computazionalmente occultante allora l'ovvia
+ simulazione e il protocollo effettivo saranno computazionalmente indistinguibil
+i.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+La classe di complessità CZK
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Considerando che 
+\family roman
+3-
+\noun on
+Coloring
+\family default
+ 
+\noun default
+è 
+\family sans
+NP-completo
+\family default
+ è immediato affermare il seguente
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wigderson_proofs_1986"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Sotto l'ipotesi di esistenza di funzioni one-way 
+\begin_inset Formula $\mathsf{NP}\subseteq\mathsf{CZK}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La caratterizzazione completa di 
+\family sans
+CZK
+\family default
+ è invece fornita dal seguente
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ben-or_everything_1988"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Sotto l'ipotesi di esistenza di funzioni one-way 
+\begin_inset Formula $\mathsf{CZK=IP}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+È possibile dunque assumendo ipotesi standard in crittografia fornire dimostrazi
+oni a conoscenza zero per ogni problema appartenente alla classe 
+\family sans
+PSPACE
+\family default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+allowframebreaks
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Bibliografia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "ZKP"
+options "alpha"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
