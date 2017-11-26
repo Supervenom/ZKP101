@@ -173,7 +173,7 @@ PoliMi
 status open
 
 \begin_layout Plain Layout
-13 Dicembre 2013, Politecnico di Milano
+13 Dicembre 2013, Sivio Micali al Politecnico di Milano
 \end_layout
 
 \end_inset
@@ -194,10 +194,24 @@ status open
 \end_layout
 
 \end_deeper
+\begin_layout Section
+IP e ZKP
+\end_layout
+
 \begin_layout PlainFrame
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\align center
+
+\series bold
+\size largest
+Dimostrazioni interattive e dimostrazioni a conoscenza zero
+\end_layout
+
+\end_deeper
 \begin_layout Frame
 \begin_inset Argument 4
 status open
@@ -606,7 +620,11 @@ P
 \series bold
 V
 \series default
- il certificato che prova l'appartenenza di 
+ il 
+\series bold
+certificato
+\series default
+ che prova l'appartenenza di 
 \begin_inset Formula $x$
 \end_inset
 
@@ -652,7 +670,15 @@ IP=PSPACE
 \end_layout
 
 \begin_layout Standard
-L'interazione dunque aggiunge effettivamente potere computazionale.
+L'
+\series bold
+interazione
+\series default
+ dunque aggiunge effettivamente 
+\series bold
+potere computazionale
+\series default
+.
 \end_layout
 
 \end_deeper
@@ -678,9 +704,19 @@ Conoscenza zero
 
 \begin_deeper
 \begin_layout Standard
-Nei protocolli crittografici interattivi non vorremmo rivelare i nostri
- segreti, perché non possiamo fidarci della controparte.
- Vorremmo cioè una dimostrazione che non comunicasse altro che la validità
+Nei 
+\series bold
+protocolli crittografici
+\series default
+ interattivi non vorremmo rivelare i nostri 
+\series bold
+segreti
+\series default
+, perché non possiamo fidarci della controparte.
+ Vorremmo cioè una dimostrazione che non comunicasse altro che la 
+\series bold
+validità
+\series default
  dell'enunciato stesso.
  
 \end_layout
@@ -766,6 +802,13 @@ Coloring
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Vogliamo che 
 \series bold
 P
@@ -787,6 +830,13 @@ V
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1087,11 +1137,486 @@ Sotto l'ipotesi di esistenza di funzioni one-way
 \end_layout
 
 \begin_layout Standard
-È possibile dunque assumendo ipotesi standard in crittografia fornire dimostrazi
-oni a conoscenza zero per ogni problema appartenente alla classe 
+È possibile dunque assumendo 
+\series bold
+ipotesi standard
+\series default
+ in crittografia fornire dimostrazioni a conoscenza zero per ogni problema
+ appartenente alla classe 
 \family sans
 PSPACE
 \family default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Protocolli 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ e PoK
+\end_layout
+
+\begin_layout PlainFrame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+
+\series bold
+\size largest
+Protocolli sigma e dimostrazioni di conoscenza
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+I protocolli sigma
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+I 
+\series bold
+protocolli sigma
+\series default
+ sono protocolli applicativi a 
+\series bold
+conoscenza zero
+\series default
+ composti dalle seguenti fasi:
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+P
+\series default
+: Commitment
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+V
+\series default
+: Challenge
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+P
+\series default
+: Response
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+V
+\series default
+: (Verification)
+\end_layout
+
+\begin_layout Standard
+In questo modo è semplice implementare protocolli di 
+\series bold
+identificazione
+\series default
+, di 
+\series bold
+firma
+\series default
+ e 
+\series bold
+dimostrazioni a conoscenza zero non interattive
+\series default
+, a costo di considerare 
+\series bold
+V
+\series default
+ onesto.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Il protocollo di identificazione di Schnorr
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Supponiamo che 
+\series bold
+P
+\series default
+ voglia 
+\series bold
+dimostrare
+\series default
+ a V di 
+\series bold
+conoscere
+\series default
+ il logaritmo discreto 
+\begin_inset Formula $x$
+\end_inset
+
+ di 
+\begin_inset Formula $y$
+\end_inset
+
+ in base 
+\begin_inset Formula $g$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{Z}_{q}$
+\end_inset
+
+, dove 
+\begin_inset Formula $q$
+\end_inset
+
+ è un primo grande.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+P
+\series default
+ usa allora il seguente 
+\series bold
+protocollo
+\series default
+, che gli permette di non rivelare 
+\begin_inset Formula $x$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+commitment:
+\family default
+\series bold
+ P
+\series default
+ manda a 
+\series bold
+V
+\series default
+ 
+\begin_inset Formula $r=g^{k}$
+\end_inset
+
+, con 
+\begin_inset Formula $k$
+\end_inset
+
+ estratto uniformemente da 
+\begin_inset Formula $\mathbb{Z}_{q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+challenge:
+\family default
+\series bold
+ V
+\series default
+ manda a 
+\series bold
+P
+\series default
+ 
+\begin_inset Formula $e$
+\end_inset
+
+ estratto uniformemente da 
+\begin_inset Formula $\mathbb{Z}_{q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+response:
+\family default
+\series bold
+ P
+\series default
+ manda a 
+\series bold
+V
+\series default
+ 
+\begin_inset Formula $s=k+x\cdot e\:(\textrm{mod}\:q$
+\end_inset
+
+) .
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+verification:
+\family default
+\series bold
+ V
+\series default
+ verifica che 
+\begin_inset Formula $r=g^{s}\cdot y^{-e}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Validità del protocollo di Schnorr
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Completezza.
+ 
+\series default
+Se effettivamente 
+\begin_inset Formula $x=\log_{g}y$
+\end_inset
+
+ allora 
+\begin_inset Formula $g^{s}\cdot y^{-e}=g^{k}\cdot(g^{x})^{e}\cdot y^{-e}=r\cdot y^{e}\cdot y^{-e}=r$
+\end_inset
+
+.
+ 
+\series bold
+V
+\series default
+ dunque accetta certamente se 
+\series bold
+P
+\series default
+ esegue correttamente il protocollo.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Correttezza.
+ 
+\series default
+Se 
+\series bold
+P
+\series default
+ non conosce 
+\begin_inset Formula $x$
+\end_inset
+
+ ha probabilità 
+\begin_inset Formula $\frac{1}{q}$
+\end_inset
+
+ di riuscire a convincere 
+\series bold
+V
+\series default
+, cioè la probabilità di estrarre uniformemente 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Conoscenza zero.
+
+\series default
+ V può simulare esecuzioni corrette del protocollo estrendo uniformemente
+ 
+\begin_inset Formula $e$
+\end_inset
+
+ ed 
+\begin_inset Formula $s$
+\end_inset
+
+, e calcolando 
+\begin_inset Formula $r=g^{s}\cdot y^{-e}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Correttezza speciale
+\series default
+.
+ Date due trascrizioni del protocollo 
+\begin_inset Formula $(r,e,s)$
+\end_inset
+
+ e 
+\begin_inset Formula $(r,e',s')$
+\end_inset
+
+ possiamo calcolare 
+\begin_inset Formula $x=\frac{s'-s}{e'-e}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Prove di conoscenza
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+La 
+\series bold
+correttezza speciale
+\series default
+ implica la 
+\begin_inset Quotes eld
+\end_inset
+
+
+\series bold
+conoscenza
+\series default
+
+\begin_inset Quotes eld
+\end_inset
+
+ effettiva di 
+\begin_inset Formula $x$
+\end_inset
+
+ da parte di 
+\series bold
+P
+\series default
+, perché fornisce un 
+\series bold
+algoritmo
+\series default
+ che permette di estrarlo.
+ La dimostrazione interattiva diventa quindi una prova di conoscenza.
+\end_layout
+
+\begin_layout Definition
+Dato un linguaggio 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ in 
+\family sans
+NP
+\family default
+, e un'istanza 
+\begin_inset Formula $x\in\mathcal{L}$
+\end_inset
+
+, una dimostrazione è detta di conoscenza a conoscenza zero se è a conoscenza
+ zero ed esiste un algortmo 
+\begin_inset Formula $E$
+\end_inset
+
+ che permette usando 
+\series bold
+P
+\series default
+ di estrarre il certificato 
+\begin_inset Formula $c$
+\end_inset
+
+ di appartenenza di 
+\begin_inset Formula $x$
+\end_inset
+
+ a 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
 .
 \end_layout
 
