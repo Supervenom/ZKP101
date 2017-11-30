@@ -144,7 +144,11 @@ key "goldreich_zero-knowledge_2002"
  per una trattazione più formale e completa.
  Gli unici prerequisiti richiesti sono la conoscenza base della teoria della
  complessità computazionale e della probabilità.
- In particolare nella Sezione 
+ 
+\end_layout
+
+\begin_layout Standard
+Nella Sezione 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:def"
@@ -392,8 +396,7 @@ P
 \series bold
 P
 \series default
- (se è onesto) ha modo di trovare la soluzione corretta con probabilità
- 
+ ha modo di trovare la soluzione corretta con probabilità 
 \begin_inset Formula $1$
 \end_inset
 
@@ -423,7 +426,7 @@ NonIso
 \family sans
 co-NP
 \family default
-, e in particolare non è noto se appartenga anche a 
+, e che in particolare non è noto se appartenga anche a 
 \family sans
 P
 \family default
@@ -702,8 +705,8 @@ P
 \end_layout
 
 \begin_layout Standard
-Ci chiediamo allora quale sia l'insieme dei problemi per cui è possibile
- fornire dimostrazioni a conoscenza zero.
+Ci chiediamo quale sia l'insieme dei problemi per cui è possibile fornire
+ dimostrazioni a conoscenza zero.
  Attraverso un esempio mostriamo che nell'ipotesi di esistenza di funzioni
  
 \shape italic
@@ -1267,6 +1270,10 @@ V
 \begin_inset Formula $x$
 \end_inset
 
+ da 
+\begin_inset Formula $[1,q-1]$
+\end_inset
+
 .
 \end_layout
 
@@ -1514,13 +1521,13 @@ A
 \series bold
 B
 \series default
- che così potrà leggere il messaggio e sarà certo che il contenuto era quello
- scritto in primo luogo da 
+ che così potrà leggere il messaggio essendo certo che il contenuto sia
+ quello scritto in primo luogo da 
 \series bold
 A
 \series default
-, dal momento che nessuno ha avuto accesso alla cassaforte nel mentre.
- Questo tipo di protocollo cioè è adatto per una comunicazione tra due agenti
+, dal momento che nel mentre ha mantenuto la cassaforte al sicuro.
+ Questo tipo di protocollo è adatto per una comunicazione tra due agenti
  che non si fidano l'uno dell'altro.
  
 \series bold
@@ -1538,7 +1545,7 @@ B
 \series bold
 A
 \series default
- possa cambiarla dopo essersi già impegnato.
+ possa modificarla dopo essersi già impegnato.
  
 \end_layout
 
