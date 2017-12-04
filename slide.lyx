@@ -183,6 +183,7 @@ status open
 
 \begin_deeper
 \begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename micali.jpg
 	lyxscale 10
@@ -229,6 +230,19 @@ L'importanza dell'interazione
 \begin_layout Standard
 Un docente deve convincere i propri studenti della validità di un teorema.
  Ha almeno due possiblità:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -237,6 +251,19 @@ Presentare una dimostrazione in
 classe
 \series default
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -246,10 +273,36 @@ Scrivere una dimostrazione nelle proprie dispense e lasciarla da fare a
 casa
 \series default
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Qual è la differenza? Le due dimostrazioni devono essere uguali?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -274,6 +327,19 @@ interazione
 semplice
 \series default
  il compito.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -347,7 +413,19 @@ P
 P
 \series default
  di giocare al seguente gioco.
- 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -368,6 +446,19 @@ V
 P
 \series default
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -381,6 +472,19 @@ V
 \end_inset
 
  isomorfo a quello selezionato.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -397,6 +501,19 @@ V
 P
 \series default
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -421,6 +538,19 @@ V
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -509,6 +639,19 @@ P
 \series default
  che esegue una strategia computazionalmente illimitata tale che le seguenti
  proprietà siano verificate:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -534,6 +677,19 @@ V
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -562,6 +718,19 @@ V
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -637,7 +806,24 @@ certificato
 NP
 \family default
 .
- È possibile però dare una caratterizzazione più precisa della classe 
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+È possibile però dare una caratterizzazione più precisa della classe 
 \family sans
 IP
 \family default
@@ -663,10 +849,27 @@ key "shamir_ip_1992"
 
 \end_inset
 
-IP=PSPACE
+
 \family default
 \shape default
+
+\begin_inset Formula $\mathsf{IP=PSPACE}$
+\end_inset
+
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -719,6 +922,19 @@ validità
 \series default
  dell'enunciato stesso.
  
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition
@@ -733,6 +949,19 @@ Una dimostrazione interattiva è (computazionalmente) a conoscenza zero se
 \end_inset
 
  delle possibili simulazioni di tale protocollo.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition
@@ -799,6 +1028,19 @@ Coloring
 
 .
  
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -830,6 +1072,19 @@ V
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -857,6 +1112,19 @@ P
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -877,6 +1145,19 @@ V
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -893,6 +1174,19 @@ V
 P
 \series default
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -913,6 +1207,19 @@ V
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -974,6 +1281,19 @@ P
 V
 \series default
  accetta con probabilità uno.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1031,6 +1351,19 @@ che tende a uno per
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1103,6 +1436,19 @@ Sotto l'ipotesi di esistenza di funzioni one-way
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1134,6 +1480,19 @@ Sotto l'ipotesi di esistenza di funzioni one-way
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1196,6 +1555,19 @@ protocolli sigma
 conoscenza zero
 \series default
  composti dalle seguenti fasi:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1204,6 +1576,19 @@ conoscenza zero
 P
 \series default
 : Commitment
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1212,6 +1597,19 @@ P
 V
 \series default
 : Challenge
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1220,6 +1618,19 @@ V
 P
 \series default
 : Response
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1228,6 +1639,19 @@ P
 V
 \series default
 : (Verification)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1281,7 +1705,11 @@ P
 \series bold
 dimostrare
 \series default
- a V di 
+ a 
+\series bold
+V
+\series default
+ di 
 \series bold
 conoscere
 \series default
@@ -1322,6 +1750,19 @@ protocollo
 \end_inset
 
 :
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1349,6 +1790,19 @@ V
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1372,6 +1826,19 @@ P
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1391,6 +1858,19 @@ V
 \end_inset
 
 ) .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1454,6 +1934,19 @@ V
 P
 \series default
  esegue correttamente il protocollo.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1483,6 +1976,19 @@ V
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1491,7 +1997,11 @@ V
 Conoscenza zero.
 
 \series default
- V può simulare esecuzioni corrette del protocollo estrendo uniformemente
+ 
+\series bold
+V
+\series default
+ può simulare esecuzioni corrette del protocollo estrendo uniformemente
  
 \begin_inset Formula $e$
 \end_inset
@@ -1505,6 +2015,19 @@ Conoscenza zero.
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1581,6 +2104,19 @@ algoritmo
 \series default
  che permette di estrarlo.
  La dimostrazione interattiva diventa quindi una prova di conoscenza.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition
@@ -1662,6 +2198,347 @@ options "alpha"
 \end_inset
 
 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Appendice: gli schemi di commitment (informalmente)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Gli 
+\series bold
+schemi di commitment
+\series default
+ permettono ad un agente 
+\series bold
+M
+\series default
+ di 
+\series bold
+affidare
+\series default
+ ad un agente 
+\series bold
+R
+\series default
+ un messaggio facendo in modo che egli non possa leggerlo, per poi svelarne
+ il contenuto in un momento successivo.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se 
+\begin_inset Formula $x$
+\end_inset
+
+ è il messaggio e 
+\begin_inset Formula $r$
+\end_inset
+
+ un valore random un modo semplice di costruire uno schema di commitment
+ è considerare 
+\begin_inset Formula $C(x,r)=H(x||r)$
+\end_inset
+
+ dove 
+\begin_inset Formula $H$
+\end_inset
+
+ è una primitiva di 
+\series bold
+hash crittografico
+\series default
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In questo modo infatti 
+\series bold
+M
+\series default
+ non può mentire in virtù della resistenza alla seconda preimmagine (
+\series bold
+binding
+\series default
+) e R non può scoprire quale sia il messaggio grazie alla resistenza alla
+ preimmagine (
+\series bold
+hiding
+\series default
+).
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Appendice: gli schemi di commitment (formalmente)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace -0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\size small
+Chiamiano schema di commitment un algoritmo pubblico 
+\begin_inset Formula $C(x,r)$
+\end_inset
+
+ dove 
+\begin_inset Formula $x$
+\end_inset
+
+ è il messaggio e 
+\begin_inset Formula $r$
+\end_inset
+
+ un valore random.
+ Se 
+\series bold
+M
+\series default
+ è il mittente e 
+\series bold
+R
+\series default
+ il ricevente il commitment consiste in 
+\series bold
+M
+\series default
+ che calcola e spedisce 
+\begin_inset Formula $c=C(x,r)$
+\end_inset
+
+ a 
+\series bold
+R
+\series default
+ mentre il decommitment in 
+\series bold
+M
+\series default
+ che svela i valori di 
+\begin_inset Formula $x'$
+\end_inset
+
+ ed 
+\begin_inset Formula $r'$
+\end_inset
+
+ e 
+\series bold
+R
+\series default
+ che controlla che 
+\begin_inset Formula $C(x',r')=c$
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\size small
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Binding
+\end_layout
+
+\end_inset
+
+Uno schema di commitment 
+\begin_inset Formula $C(x,r)$
+\end_inset
+
+ è detto (computazionalmente) vincolante se nessun avversario (computazionalment
+e limitato) noti 
+\begin_inset Formula $x$
+\end_inset
+
+ ed 
+\begin_inset Formula $r$
+\end_inset
+
+ può generare 
+\begin_inset Formula $x'\neq x$
+\end_inset
+
+ ed 
+\begin_inset Formula $r'$
+\end_inset
+
+ tali che 
+\begin_inset Formula $C(x',r')=C(x,r)$
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\size small
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Concealing o Hiding
+\end_layout
+
+\end_inset
+
+Uno schema di commitment 
+\begin_inset Formula $C(x,r)$
+\end_inset
+
+ è detto (computazionalmente) occultante se nessun avversario (computazionalment
+e limitato) può indovinare 
+\begin_inset Formula $b$
+\end_inset
+
+ dato 
+\begin_inset Formula $c=C(x_{b},r)$
+\end_inset
+
+ con 
+\begin_inset Formula $b$
+\end_inset
+
+ estratto uniformemente da 
+\begin_inset Formula $\{0,1\}$
+\end_inset
+
+ ed essendo a lui noti 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ e 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
